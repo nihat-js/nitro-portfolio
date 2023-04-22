@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+
+nav {
+  background-color: #08728f;
+  // color: #fff;
+  .row {
+    padding: 15px 0 ;
+    display: flex;
+    justify-content: space-between;
+    .title {
+      -webkit-text-stroke: 1px #b8c772;
+      font-size: 40px;
+    }
+    .actions {
+      img {
+        width: 32px;
+      }
+      img:hover{
+        filter: invert(1);
+      }
+    }
+  }
+}
