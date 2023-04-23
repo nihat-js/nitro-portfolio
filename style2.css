@@ -7,6 +7,7 @@
 
 .container {
   max-width: 1160px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -51,6 +52,7 @@ nav .row .actions img:hover {
 
 section.hero {
   background-color: #f5f7f9;
+  padding: 40px 0;
 }
 section.hero .container .row {
   height: 600px;
@@ -92,6 +94,11 @@ section.hero .container .row .right .pyramid .part {
 section.hero .container .row .right .pyramid .part:hover {
   background-color: lightgray !important;
 }
+@media screen and (max-width: 768px) {
+  section.hero .container .row {
+    flex-direction: column;
+  }
+}
 section.second {
   padding: 100px 0;
   -webkit-clip-path: polygon(0 12vh, 100% 0, 100% 100%, 0 100%);
@@ -104,15 +111,22 @@ section.second .container .title {
   font-size: 35px;
   margin-bottom: 15px;
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
-section.second .container .skill {
+section.second .container .skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 15px;
+}
+section.second .container .skills .skill {
   cursor: default;
   display: inline-block;
   padding: 8px 12px;
-  background-color: #dcdddd;
+  background-color: hsl(255, 71%, 68%);
 }
-section.second .container .skill:hover {
-  background-color: #d1d2d3;
+section.second .container .skills .skill:hover {
+  background-color: hsl(255, 71%, 75%);
 }
 
 .grad {
@@ -132,18 +146,19 @@ footer .container .up img {
   width: 48px;
   margin-bottom: 40px;
   transition: 0.2s ease-out;
-  cursor: pointer;
 }
 footer .container .up img:hover {
-  transform: translateY(-10px);
+  border-radius: 50%;
+  background-color: blue;
+  transform: translateY(-4px);
 }
 footer .container .social {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 footer .container .social img {
-  width: 40px;
+  width: 32px;
   transition: 0.2s all;
 }
 footer .container .social img:hover {
@@ -157,4 +172,77 @@ footer .container .social .instagram:hover {
 }
 footer .container .social .linkedin:hover {
   filter: invert(44%) sepia(94%) saturate(1518%) hue-rotate(161deg) brightness(94%) contrast(101%);
+}
+footer .container .social .whatsapp:hover {
+  filter: invert(72%) sepia(7%) saturate(3053%) hue-rotate(68deg) brightness(92%) contrast(89%);
+}
+
+section.contact {
+  background: #262a37;
+  color: #fff;
+  padding: 40px 0;
+}
+section.contact .container .subheading {
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+}
+section.contact .container .mark-green {
+  color: hsl(156, 78%, 44%);
+}
+section.contact .container .heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+section.contact .container form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+section.contact .container form .group-1 {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+section.contact .container form input,
+section.contact .container form textarea {
+  width: 100%;
+  padding: 18px 12px;
+  font-size: 18px;
+  background: #1a2027;
+  color: #979BA4;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  resize: none;
+}
+section.contact .container form .button-wrap {
+  margin-top: 25px;
+  text-align: center;
+}
+section.contact .container form .button-wrap button {
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  padding: 20px 15px;
+  background-color: hsl(156, 78%, 44%);
+  color: #fff;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+section.contact .container form .button-wrap button:hover {
+  background-color: #2EE59D;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+@media screen and (max-width: 768px) {
+  section.second {
+    margin-top: 0;
+  }
+  section.second .container .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=style2.css.map */
