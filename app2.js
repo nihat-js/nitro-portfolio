@@ -1,13 +1,15 @@
 let pyramidSections = [
   {
+    id : 1,
     name: "Upper",
-    text: "Nihat Abdullazade",
+    text: "Hey, <span class='grad'> I am Nihat </span>",
     active: true,
     color: "#9a8c98",
     height: "25%",
 
   },
   {
+    id : 2,
     name: "Middle",
     text: "Passionate Frontend Developer",
     active: false,
@@ -16,9 +18,9 @@ let pyramidSections = [
 
   },
   {
+    id : 3,
     name: "Core",
-  
-    text: "With 6 months experience",
+   text: "With 6 months experience",
     active: false,
     color: "#22223b",
     height: "45%",
@@ -45,6 +47,22 @@ function renderActivePyramid() {
   let activeOne = pyramidSections.filter(p => p.active === true)[0]
   document.querySelector(".hero .heading").innerHTML = activeOne.text
 }
+
+function continuePyramid(){
+  let activeOneId = pyramidSections.filter(p => p.active ===true)[0].id
+  let newOne = pyramidSections.filter(p => p.id === activeOneId+1)
+  let newOneId ;
+  if (newOne.length == 0){
+    newOneId = 1
+  }else {
+    newOneId  = newOne[0].id 
+  }
+  console.log("new id " + newOneId)
+
+  pyramidSections.forEach(p => p.id === newOneId ? p.active = true : p.active = false )
+  renderActivePyramid()
+}
+
 
 
 renderActivePyramid()

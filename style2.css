@@ -17,16 +17,18 @@ a {
 
 nav {
   background-color: #08728f;
+  background-color: #8767e5;
 }
 nav .row {
   padding: 15px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 nav .row .title {
   color: #8767e5;
   color: #fff;
-  font-size: 40px;
+  font-size: 32px;
   padding: 8px 12px;
   transition: 0.3s all ease-in;
 }
@@ -35,43 +37,44 @@ nav .row .title:hover {
 }
 nav .row .actions {
   display: flex;
-  gap: 10px;
+  gap: 14px;
 }
 nav .row .actions img {
-  width: 48px;
-  padding: 12px;
+  width: 40px;
+  padding: 8px;
   background: #F0EBFE;
+  border-radius: 6px;
 }
 nav .row .actions img:hover {
-  background: #8767e5;
+  background: hsl(255, 71%, 75%);
 }
 
-.hero {
+section.hero {
   background-color: #f5f7f9;
 }
-.hero .container .row {
+section.hero .container .row {
   height: 600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.hero .container .row .left .heading {
+section.hero .container .row .left .heading {
   font-size: 40px;
   font-weight: bold;
   color: hsl(255, 71%, 45%);
   margin-bottom: 30px;
 }
-.hero .container .row .left button {
+section.hero .container .row .left button {
   font-size: 18px;
   padding: 18px 20px;
   color: #fff;
   background-color: hsl(255, 71%, 65%);
   border: none;
 }
-.hero .container .row .left button:hover {
-  background-color: hsl(255, 71%, 75%);
+section.hero .container .row .left button:hover {
+  background-color: hsl(255, 71%, 45%);
 }
-.hero .container .row .right .pyramid {
+section.hero .container .row .right .pyramid {
   width: 400px;
   height: 300px;
   background-color: transparent;
@@ -81,11 +84,77 @@ nav .row .actions img:hover {
   flex-direction: column;
   align-items: center;
 }
-.hero .container .row .right .pyramid .part {
+section.hero .container .row .right .pyramid .part {
   margin-top: 4px;
   width: 100%;
   transform: 0.2s all;
 }
-.hero .container .row .right .pyramid .part:hover {
+section.hero .container .row .right .pyramid .part:hover {
   background-color: lightgray !important;
+}
+section.second {
+  padding: 100px 0;
+  -webkit-clip-path: polygon(0 12vh, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 12vh, 100% 0, 100% 100%, 0 100%);
+  background-color: #8767e5 !important;
+  color: #fff;
+  margin-top: -120px;
+}
+section.second .container .title {
+  font-size: 35px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+section.second .container .skill {
+  cursor: default;
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #dcdddd;
+}
+section.second .container .skill:hover {
+  background-color: #d1d2d3;
+}
+
+.grad {
+  background-image: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+footer {
+  background-color: #151719;
+  padding: 40px 0;
+}
+footer .container .up {
+  text-align: center;
+}
+footer .container .up img {
+  width: 48px;
+  margin-bottom: 40px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+footer .container .up img:hover {
+  transform: translateY(-10px);
+}
+footer .container .social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+footer .container .social img {
+  width: 40px;
+  transition: 0.2s all;
+}
+footer .container .social img:hover {
+  transform: scale(1.1);
+}
+footer .container .social .twitter:hover {
+  filter: invert(44%) sepia(94%) saturate(1518%) hue-rotate(161deg) brightness(94%) contrast(101%);
+}
+footer .container .social .instagram:hover {
+  filter: invert(29%) sepia(63%) saturate(1163%) hue-rotate(285deg) brightness(100%) contrast(100%);
+}
+footer .container .social .linkedin:hover {
+  filter: invert(44%) sepia(94%) saturate(1518%) hue-rotate(161deg) brightness(94%) contrast(101%);
 }/*# sourceMappingURL=style2.css.map */
